@@ -1,2 +1,55 @@
-# Discord-Name-Fixer
-Automatically enforces clean, readable display names by removing invisible and non-standard characters.
+# NameFixer
+A Discord bot built with [Hikari](https://github.com/hikari-py/hikari/) that automatically enforces clean and readable display names by removing invisible or non-standard characters.
+
+## Features
+Uses Discord events as triggers to detect and fix invalid display names:
+
+- On member join
+- On member update (nickname, roles, etc.)
+- On message send (passive cleanup of existing members)
+
+## Invite
+Don't want to self-host? I host a public instance of NameFixer that you can invite to your server:  
+https://discord.com/oauth2/authorize?client_id=1483731224160632932
+
+### Important Notes
+- The bot must have the **Manage Nicknames** permission to function.
+- The bot's role must be **higher than the roles of users it is trying to rename**.
+- The bot **cannot** modify the server owner or users with higher roles.
+
+## Requirements
+- Python 3.10+
+- Discord bot token
+  - You will need to register a new bot in the [Discord Dev Portal](https://discord.com/developers/applications) to acquire a token.
+
+## Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Toph2T1/Discord-Name-Fixer
+   cd Discord-Name-Fixer
+   ```
+
+2. Create a `.env` file:
+   ```env
+   TOKEN="your_bot_token_here"
+   ```
+   (See `.env.example`)
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the bot:
+   ```bash
+   python -m bot
+   ```
+
+## Required Permissions & Intents
+### Permissions
+- Manage Nicknames
+
+### Intents
+- GUILDS
+- GUILD_MEMBERS
+- GUILD_MESSAGES
