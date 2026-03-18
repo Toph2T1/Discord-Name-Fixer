@@ -10,7 +10,7 @@ Uses Discord events as triggers to detect and fix invalid display names:
 
 ## Invite
 Don't want to self-host? I host a public instance of NameFixer that you can invite to your server:  
-https://discord.com/oauth2/authorize?client_id=1483731224160632932
+[Click Me!](https://discord.com/oauth2/authorize?client_id=1483731224160632932&permissions=134217728&integration_type=0&scope=bot)
 
 ### Important Notes
 - The bot must have the **Manage Nicknames** permission to function.
