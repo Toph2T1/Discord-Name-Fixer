@@ -1,5 +1,5 @@
 # NameFixer
-A Discord bot built with [Hikari](https://github.com/hikari-py/hikari/) that automatically enforces clean and readable display names by removing invisible or non-standard characters.
+A Discord bot built with [Hikari](https://github.com/hikari-py/hikari/) that automatically enforces clean and readable display names by removing invisible or non-standard characters (e.g. emoji, fancy Unicode text like `𝓣𝓮𝓼𝓽`, or hidden characters). Invalid names are fixed by resetting the member’s nickname to their username.
 
 ## Features
 Uses Discord events as triggers to detect and fix invalid display names:
