@@ -53,3 +53,6 @@ Don't want to self-host? I host a public instance of NameFixer that you can invi
 - GUILDS
 - GUILD_MEMBERS
 - GUILD_MESSAGES
+
+### Developer Portal
+- Enable **Server Members Intent** under Privileged Gateway Intents
