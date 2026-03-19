@@ -1,5 +1,13 @@
 # NameFixer
-A Discord bot built with [Hikari](https://github.com/hikari-py/hikari/) that automatically enforces clean and readable display names by removing invisible or non-standard characters (e.g. emoji, fancy Unicode text like `𝓣𝓮𝓼𝓽`, or hidden characters). Invalid names are fixed by resetting the member’s nickname to their username.
+A Discord bot built with [Hikari](https://github.com/hikari-py/hikari/) that ensures display names remain clear and readable by blocking non-english characters, including:  
+- Accented characters (é, ñ, ö)
+- Emoji
+- Fancy Unicode (𝓣𝓮𝓼𝓽)
+- Kanji / Hiragana / Katakana (Japanese)
+- Any non-ASCII script (Chinese, Korean, Cyrillic, etc.)
+- Zero-width / invisible characters
+
+Invalid names are fixed by resetting the member’s nickname to their username.
 
 ## Features
 Uses Discord events as triggers to detect and fix invalid display names:
@@ -7,15 +15,6 @@ Uses Discord events as triggers to detect and fix invalid display names:
 - On member join
 - On member update (nickname, roles, etc.)
 - On message send (passive cleanup of existing members)
-
-## Invite
-Don't want to self-host? I host a public instance of NameFixer that you can invite to your server:  
-[Click Me!](https://discord.com/oauth2/authorize?client_id=1483731224160632932&permissions=134217728&integration_type=0&scope=bot)
-
-### Important Notes
-- The bot must have the **Manage Nicknames** permission to function.
-- The bot's role must be **higher than the roles of users it is trying to rename**.
-- The bot **cannot** modify the server owner or users with higher roles.
 
 ## Requirements
 - Python 3.10+
@@ -56,3 +55,8 @@ Don't want to self-host? I host a public instance of NameFixer that you can invi
 
 ### Developer Portal
 - Enable **Server Members Intent** under Privileged Gateway Intents
+
+### Important Notes
+- The bot must have the **Manage Nicknames** permission to function.
+- The bot's role must be **higher than the roles of users it is trying to rename**.
+- The bot **cannot** modify the server owner or users with higher roles.
